@@ -1,4 +1,10 @@
 package com.java21days;
 
-public class OptionBox {
+import javax.swing.*;
+
+public class OptionBox extends JFrame {
+    OptionBox(String title, String message, String[] options){
+        super(title);
+
+    }
 }
