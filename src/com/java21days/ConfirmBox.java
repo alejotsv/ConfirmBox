@@ -8,5 +8,11 @@ public class ConfirmBox extends JFrame {
 
     ConfirmBox(String title){
         super(title);
+        setSize(dim);
+        int response = JOptionPane.showConfirmDialog(this, "Do you want to continue?");
+
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
     }
 }
