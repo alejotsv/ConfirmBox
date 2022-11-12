@@ -9,7 +9,7 @@ public class MessageBox extends JFrame {
         JOptionPane.showMessageDialog(
                 null,
                 message,
-                "Hello",
+                title,
                 JOptionPane.PLAIN_MESSAGE
         );
     }
