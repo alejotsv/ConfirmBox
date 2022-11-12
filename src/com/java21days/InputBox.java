@@ -4,11 +4,11 @@ import javax.swing.*;
 
 public class InputBox extends JFrame {
     String response;
-    InputBox(String title){
+    InputBox(String message, String title){
         response = JOptionPane.showInputDialog(
           null,
-          "What's your name?",
-          "Name",
+          message,
+          title,
           JOptionPane.QUESTION_MESSAGE
         );
     }
