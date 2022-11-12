@@ -6,14 +6,17 @@ public class DialogBoxes {
     public static void main(String[] args) {
         ConfirmBox confirm = new ConfirmBox("Confirm box");
         InputBox input = new InputBox("What is your name?", "Name");
-        String response = input.getResponse();
-        MessageBox message = new MessageBox(response, "Greetings");
+        String name = input.getResponse();
+        String greetingMessage = "Hello, " + name;
+        MessageBox greeting = new MessageBox(greetingMessage, "Greetings");
 
         String foodTitle = "Favorite food";
         String foodMessage = "What is your favorite food?";
         String[] foodOptions = { "Rice with fried rice", "Sushi", "Ramen", "Pizza", "Tartare" };
         OptionBox optionBox = new OptionBox(foodTitle, foodMessage, foodOptions);
 
-        System.out.println(optionBox.getResponse());
+        String favoriteFoodMessage = name + ", good to know that your favorite food is " + optionBox.getResponse();
+        MessageBox favoriteFood = new MessageBox(favoriteFoodMessage, "Your favorite food");
+
     }
 }

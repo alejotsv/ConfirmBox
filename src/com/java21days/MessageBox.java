@@ -3,8 +3,7 @@ package com.java21days;
 import javax.swing.*;
 
 public class MessageBox extends JFrame {
-    MessageBox(String name, String title){
-        String message = "Hello, " + name;
+    MessageBox(String message, String title){
         JOptionPane.showMessageDialog(
                 null,
                 message,
