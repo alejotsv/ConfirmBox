@@ -3,10 +3,10 @@ package com.java21days;
 import javax.swing.*;
 
 public class OptionBox extends JFrame {
-    int response;
+    String response;
 
     OptionBox(String title, String message, String[] options){
-        response = JOptionPane.showOptionDialog(
+        int selected = JOptionPane.showOptionDialog(
                 null,
                 message,
                 title,
@@ -16,9 +16,10 @@ public class OptionBox extends JFrame {
                 options,
                 options[0]
                 );
+        response = options[selected];
     }
 
-    int getResponse(){
+    String getResponse(){
         return response;
     }
 }
